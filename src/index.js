@@ -23,8 +23,8 @@ app.use('/api/empresa', empresaRouter);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
+await connectDB();
+
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });
-
-connectDB();
