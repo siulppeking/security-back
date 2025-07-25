@@ -10,7 +10,16 @@ const routerPerfil = require('./routes/perfilRoute');
 const empresaRouter = require('./routes/empresaRoute');
 
 const app = express();
-app.use(cors());
+
+const origins = [
+    'http://localhost:5173',
+    //'https://security-v1.netlify.app',
+    //'https://sso.fap.mil.pe'
+];
+
+app.use(cors({
+    origin: origins
+}));
 app.use(morgan('dev'));
 app.use(express.json());
 
