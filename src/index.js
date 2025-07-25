@@ -12,7 +12,7 @@ const empresaRouter = require('./routes/empresaRoute');
 const app = express();
 
 const origins = [
-    //'http://localhost:5173',
+    'http://localhost:5173',
     'https://security-v1.netlify.app',
     'https://sso.fap.mil.pe'
 ];
